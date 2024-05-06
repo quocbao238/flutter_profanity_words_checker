@@ -1,11 +1,11 @@
 name: flutter_profanity_words_checker
-description: "Full list of bad words and top swear words banned by Google"
+description: 'Full list of bad words and top swear words banned by Google'
 version: 0.0.1
 homepage:
 
 environment:
-  sdk: ">=3.3.4 <4.0.0"
-  flutter: ">=1.17.0"
+  sdk: '>=3.3.0 <4.0.0'
+  flutter: '>=1.17.0'
 
 dependencies:
   flutter:

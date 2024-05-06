@@ -15,9 +15,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Profanity Words Checker',
-      theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-          useMaterial3: true),
+      theme: ThemeData(colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple), useMaterial3: true),
       home: const MyHomePage(title: 'Flutter Profanity Words Checker'),
     );
   }
@@ -41,8 +39,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   void initState() {
-    _flutterProfanityChecker =
-        FlutterProfanityChecker(language: Language.getByLanguageCode('en'));
+    _flutterProfanityChecker = FlutterProfanityChecker(language: Language.getByLanguageCode('en'));
     _flutterProfanityChecker.init();
     _textEditingController.addListener(() {
       error = null;
@@ -111,11 +108,9 @@ class _MyHomePageState extends State<MyHomePage> {
                           isHasCurseWords = false;
                         });
 
-                        final listWords = await _flutterProfanityChecker
-                            .all(_textEditingController.text);
+                        final listWords = _flutterProfanityChecker.all(_textEditingController.text);
                         if (listWords.isNotEmpty) {
-                          error =
-                              'Found ${listWords.length} profanity words: [${listWords.join(', ')}]';
+                          error = 'Found ${listWords.length} profanity words: [${listWords.join(', ')}]';
                         } else {
                           safe = 'This text is safe';
                         }
@@ -135,8 +130,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           safe = null;
                           isHasCurseWords = false;
                         });
-                        isHasCurseWords = await _flutterProfanityChecker
-                            .hasCurseWords(_textEditingController.text);
+                        isHasCurseWords = await _flutterProfanityChecker.hasCurseWords(_textEditingController.text);
                         if (isHasCurseWords) {
                           error = 'This text has profanity words';
                         } else {

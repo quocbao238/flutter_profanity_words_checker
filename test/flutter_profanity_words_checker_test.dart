@@ -6,14 +6,13 @@ Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   const String languageCode = 'en';
   final FlutterProfanityChecker flutterProfanityChecker =
-      FlutterProfanityChecker(
-          language: Language.getByLanguageCode(languageCode));
+      FlutterProfanityChecker(language: Language.getByLanguageCode(languageCode));
   await flutterProfanityChecker.init();
 
   // API Function retrieves all the profanity words as an text input.
   group('API Function retrieves all the profanity words as an text input', () {
     test('Should return the profanity word', () async {
-      const tesingStr = 'I have a vibrator';
+      const tesingStr = 'This post looks like a shit';
       final result = await flutterProfanityChecker.all(tesingStr);
       expect(result, ['vibrator']);
     });
@@ -33,19 +32,16 @@ Future<void> main() async {
 
   /// API Function to checks if a given sentence contains any profanity words.
   /// Returns true if the sentence contains profanity words, otherwise false.
-  group(
-      'API Function to checks if a given sentence contains any profanity words',
-      () {
+  group('API Function to checks if a given sentence contains any profanity words', () {
     test('Should return true', () async {
-      const tesingStr = 'I have a vibrator';
+      const tesingStr = 'This post looks like a shit';
       final result = await flutterProfanityChecker.hasCurseWords(tesingStr);
       expect(result, true);
     });
 
     // Check if the word is not a profanity word
     test('Should return false', () async {
-      final result =
-          await flutterProfanityChecker.hasCurseWords('good morning');
+      final result = await flutterProfanityChecker.hasCurseWords('good morning');
       expect(result, false);
     });
 

@@ -25,8 +25,7 @@ enum Language {
   final String badWordsFileName;
   final String title;
   const Language(this.title, this.badWordsFileName);
-  static Language getByLanguageCode(String languageCode) =>
-      switch (languageCode) {
+  static Language getByLanguageCode(String languageCode) => switch (languageCode) {
         "en" => Language.en,
         "es" => Language.es,
         "vi" => Language.vi,
@@ -42,15 +41,13 @@ class FlutterProfanityChecker {
 
   /// API Function to initialize the profanity words
   Future<void> init() async {
-    final str = await rootBundle.loadString(
-        'packages/flutter_profanity_words_checker/${language.badWordsFileName}');
+    final str = await rootBundle.loadString('packages/flutter_profanity_words_checker/${language.badWordsFileName}');
     _badWords = str.split('\n').toSet();
   }
 
   Future<void> changeLanguage(Language language) async {
     language = language;
-    final str = await rootBundle.loadString(
-        'packages/flutter_profanity_words_checker/${language.badWordsFileName}');
+    final str = await rootBundle.loadString('packages/flutter_profanity_words_checker/${language.badWordsFileName}');
     _badWords = str.split('\n').toSet();
   }
 
@@ -63,7 +60,7 @@ class FlutterProfanityChecker {
   }
 
   /// API Function retrieves all the profanity words as an text input.
-  Future<List<String>> all(String text) async {
+  List<String> all(String text) {
     _checkInit();
     if (text.isEmpty) return [];
     final result = <String>[];
@@ -79,7 +76,7 @@ class FlutterProfanityChecker {
 
   /// API Function to checks if a given sentence contains any profanity words.
   /// Returns true if the sentence contains profanity words, otherwise false.
-  Future<bool> hasCurseWords(String text) async {
+  bool hasCurseWords(String text) {
     _checkInit();
     if (text.isEmpty) return false;
     for (final word in _badWords) {
