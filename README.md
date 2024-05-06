@@ -78,15 +78,7 @@ import 'package:flutter_profanity_words_checker/flutter_profanity_words_checker.
   }
 ```
 
-## ✨ Additional information
-
-- **Documentation**: Find more detailed usage instructions and API documentation in the [API reference](https://pub.dev/documentation/flutter_profanity_words_checker/latest/).
-- **Contribution Guidelines**: Contributions are welcome! Feel free to submit bug reports, feature requests, or pull requests on the [GitHub repository](https://github.com/your-repo-url).
-- **Issue Tracking**: If you encounter any issues or have questions about the package, please open an issue on the [GitHub repository](https://github.com/your-repo-url/issues).
-
-I strive to respond to issues and pull requests promptly. Your feedback and contributions are appreciated!
-
-💟 Acknowledgments
+## 💟 Acknowledgments
 
 This library is used to check if a given text contains any profanity words. We would like to express our gratitude to the following individuals and organizations:
 
@@ -100,3 +92,12 @@ This library is used to check if a given text contains any profanity words. We w
   - [vn-badwords](https://github.com/Eris-182/vn-badwords): Offering profanity word lists for Vietnamese.
 
 Your efforts and contributions have greatly enriched this package and made it more effective in serving its purpose. Thank you!
+
+
+## ✨ Additional information
+
+- **Documentation**: Find more detailed usage instructions and API documentation in the [API reference](https://pub.dev/documentation/flutter_profanity_words_checker/latest/).
+- **Contribution Guidelines**: Contributions are welcome! Feel free to submit bug reports, feature requests, or pull requests on the [GitHub repository](https://github.com/your-repo-url).
+- **Issue Tracking**: If you encounter any issues or have questions about the package, please open an issue on the [GitHub repository](https://github.com/your-repo-url/issues).
+
+I strive to respond to issues and pull requests promptly. Your feedback and contributions are appreciated!
